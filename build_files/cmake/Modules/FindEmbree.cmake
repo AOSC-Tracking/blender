@@ -63,6 +63,11 @@ if(EMBREE_STATIC_LIB)
       embree_sse42
       embree_avx
       embree_avx2
+      embree_avx512
+    )
+  ELSEIF(LINUX AND ("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "aarch64"))
+    SET(_embree_SIMD_COMPONENTS
+      embree_avx2
     )
   endif()
 
