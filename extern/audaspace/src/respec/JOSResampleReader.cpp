@@ -31,7 +31,7 @@
 
 AUD_NAMESPACE_BEGIN
 
-JOSResampleReader::JOSResampleReader(std::shared_ptr<IReader> reader, SampleRate rate) :
+JOSResampleReader::JOSResampleReader(std::shared_ptr<IReader> reader, SampleRate rate, ResampleQuality quality) :
 	ResampleReader(reader, rate),
 	m_channels(CHANNELS_INVALID),
 	m_n(0),
@@ -39,6 +39,28 @@ JOSResampleReader::JOSResampleReader(std::shared_ptr<IReader> reader, SampleRate
 	m_cache_valid(0),
 	m_last_factor(0)
 {
+	switch(quality)
+	{
+	case ResampleQuality::LOW:
+		m_len = m_len_low;
+		m_L = m_L_low;
+		m_coeff = m_coeff_low;
+		break;
+	case ResampleQuality::MEDIUM:
+		m_len = m_len_medium;
+		m_L = m_L_medium;
+		m_coeff = m_coeff_medium;
+		break;
+	case ResampleQuality::HIGH:
+		m_len = m_len_high;
+		m_L = m_L_high;
+		m_coeff = m_coeff_high;
+		break;
+	default:
+		m_len = m_len_low;
+		m_L = m_L_low;
+		m_coeff = m_coeff_low;
+	}
 }
 
 void JOSResampleReader::reset()
