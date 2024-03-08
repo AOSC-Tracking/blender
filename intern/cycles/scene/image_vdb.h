@@ -9,6 +9,7 @@
 #  include <openvdb/openvdb.h>
 #endif
 #ifdef WITH_NANOVDB
+#  define NANOVDB_USE_OPENVDB
 #  include <nanovdb/util/GridHandle.h>
 #endif
 
