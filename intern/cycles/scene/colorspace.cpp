@@ -310,7 +310,7 @@ inline void processor_apply_pixels_rgba(const OCIO::Processor *processor,
       float_pixels[i] = value;
     }
 
-    const OCIO::PackedImageDesc desc((float *)float_pixels.data(), width, 1, 4);
+    OCIO::PackedImageDesc desc((float *)float_pixels.data(), width, 1, 4);
     device_processor->apply(desc);
 
     for (size_t i = 0; i < width; i++) {
@@ -357,7 +357,7 @@ inline void processor_apply_pixels_grayscale(const OCIO::Processor *processor,
       }
     }
 
-    const OCIO::PackedImageDesc desc((float *)float_pixels.data(), width, 1, 3);
+    OCIO::PackedImageDesc desc((float *)float_pixels.data(), width, 1, 3);
     device_processor->apply(desc);
 
     {
