@@ -143,7 +143,7 @@ static PyObject *bpy_rna_data_temp_data(PyObject * /*self*/, PyObject *args, PyO
 {
   PyC_UnicodeAsBytesAndSize_Data filepath_data = {nullptr};
   BPy_DataContext *ret;
-  static const char *_keywords[] = {"filepath", nullptr};
+  static const char * const _keywords[] = {"filepath", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "|$" /* Optional keyword only arguments. */

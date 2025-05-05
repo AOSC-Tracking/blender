@@ -1388,7 +1388,7 @@ static bool bpy_prop_string_visit_fn_call(
 
   if (PyTuple_CheckExact(item)) {
     /* Positional only. */
-    static const char *_keywords[] = {
+    static const char * const _keywords[] = {
         "",
         "",
         nullptr,
@@ -2587,7 +2587,7 @@ static PyObject *BPy_BoolProperty(PyObject *self, PyObject *args, PyObject *kw)
   PyObject *get_fn = nullptr;
   PyObject *set_fn = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",
       "name",
       "description",
@@ -2750,7 +2750,7 @@ static PyObject *BPy_BoolVectorProperty(PyObject *self, PyObject *args, PyObject
   PyObject *get_fn = nullptr;
   PyObject *set_fn = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",
       "name",
       "description",
@@ -2940,7 +2940,7 @@ static PyObject *BPy_IntProperty(PyObject *self, PyObject *args, PyObject *kw)
   PyObject *get_fn = nullptr;
   PyObject *set_fn = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",
       "name",
       "description",
@@ -3126,7 +3126,7 @@ static PyObject *BPy_IntVectorProperty(PyObject *self, PyObject *args, PyObject 
   PyObject *get_fn = nullptr;
   PyObject *set_fn = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",     "name",    "description", "translation_context",
       "default",  "min",     "max",         "soft_min",
       "soft_max", "step",    "options",     "override",
@@ -3327,7 +3327,7 @@ static PyObject *BPy_FloatProperty(PyObject *self, PyObject *args, PyObject *kw)
   PyObject *get_fn = nullptr;
   PyObject *set_fn = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",     "name", "description", "translation_context",
       "default",  "min",  "max",         "soft_min",
       "soft_max", "step", "precision",   "options",
@@ -3514,7 +3514,7 @@ static PyObject *BPy_FloatVectorProperty(PyObject *self, PyObject *args, PyObjec
   PyObject *get_fn = nullptr;
   PyObject *set_fn = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",     "name",   "description", "translation_context",
       "default",  "min",    "max",         "soft_min",
       "soft_max", "step",   "precision",   "options",
@@ -3721,7 +3721,7 @@ static PyObject *BPy_StringProperty(PyObject *self, PyObject *args, PyObject *kw
   search_options_enum.items = rna_enum_property_string_search_flag_items;
   search_options_enum.value = PROP_STRING_SEARCH_SUGGESTION;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",
       "name",
       "description",
@@ -3947,7 +3947,7 @@ static PyObject *BPy_EnumProperty(PyObject *self, PyObject *args, PyObject *kw)
   PyObject *get_fn = nullptr;
   PyObject *set_fn = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",
       "items",
       "name",
@@ -4187,7 +4187,7 @@ PyObject *BPy_PointerProperty(PyObject *self, PyObject *args, PyObject *kw)
 
   PyObject *update_fn = nullptr, *poll_fn = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",
       "type",
       "name",
@@ -4336,7 +4336,7 @@ PyObject *BPy_CollectionProperty(PyObject *self, PyObject *args, PyObject *kw)
   BPy_EnumProperty_Parse_WithSRNA tags_enum{};
   tags_enum.srna = srna;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",
       "type",
       "name",
@@ -4464,7 +4464,7 @@ static PyObject *BPy_RemoveProperty(PyObject *self, PyObject *args, PyObject *kw
 
   const char *id = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "attr",
       nullptr,
   };

@@ -332,7 +332,7 @@ static PyObject *pygpu_framebuffer__tp_new(PyTypeObject * /*self*/, PyObject *ar
 
   PyObject *depth_attachment = nullptr;
   PyObject *color_attachements = nullptr;
-  static const char *_keywords[] = {"depth_slot", "color_slots", nullptr};
+  static const char * const _keywords[] = {"depth_slot", "color_slots", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "|$" /* Optional keyword only arguments. */
@@ -431,7 +431,7 @@ static PyObject *pygpu_framebuffer_clear(BPyGPUFrameBuffer *self, PyObject *args
   PyObject *py_depth = nullptr;
   PyObject *py_stencil = nullptr;
 
-  static const char *_keywords[] = {"color", "depth", "stencil", nullptr};
+  static const char * const _keywords[] = {"color", "depth", "stencil", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "|$" /* Optional keyword only arguments. */
@@ -556,7 +556,7 @@ static PyObject *pygpu_framebuffer_read_color(BPyGPUFrameBuffer *self,
   PyC_StringEnum pygpu_dataformat = {bpygpu_dataformat_items, GPU_RGBA8};
   BPyGPUBuffer *py_buffer = nullptr;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "x", "y", "xsize", "ysize", "channels", "slot", "format", "data", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
@@ -661,7 +661,7 @@ static PyObject *pygpu_framebuffer_read_depth(BPyGPUFrameBuffer *self,
   int x, y, w, h;
   BPyGPUBuffer *py_buffer = nullptr;
 
-  static const char *_keywords[] = {"x", "y", "xsize", "ysize", "data", nullptr};
+  static const char * const _keywords[] = {"x", "y", "xsize", "ysize", "data", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "i"  /* `x` */

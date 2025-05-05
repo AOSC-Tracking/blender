@@ -47,7 +47,7 @@ static PyObject *pygpu_compute_dispatch(PyObject * /*self*/, PyObject *args, PyO
   int groups_y_len;
   int groups_z_len;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "shader", "groups_x_len", "groups_y_len", "groups_z_len", nullptr};
   static _PyArg_Parser _parser = {
         PY_ARG_PARSER_HEAD_COMPAT()

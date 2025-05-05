@@ -206,7 +206,7 @@ static PyObject *bpy_cli_command_register(PyObject * /*self*/, PyObject *args, P
   PyObject *py_id;
   PyObject *py_exec_fn;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "id",
       "execute",
       nullptr,

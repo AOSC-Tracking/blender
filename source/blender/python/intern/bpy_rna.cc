@@ -3677,7 +3677,7 @@ static PyObject *pyrna_struct_is_property_set(BPy_StructRNA *self, PyObject *arg
 
   PYRNA_STRUCT_CHECK_OBJ(self);
 
-  static const char *_keywords[] = {"", "ghost", nullptr};
+  static const char * const _keywords[] = {"", "ghost", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "s"  /* `name` (positional). */

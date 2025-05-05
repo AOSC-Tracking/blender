@@ -581,7 +581,7 @@ static PyObject *bpy_app_is_job_running(PyObject * /*self*/, PyObject *args, PyO
   job_type_enum.items = rna_enum_wm_job_type_items;
   job_type_enum.value = 0;
 
-  static const char *_keywords[] = {"job_type", nullptr};
+  static const char * const _keywords[] = {"job_type", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O&" /* `job_type` */
@@ -613,7 +613,7 @@ PyDoc_STRVAR(
 static PyObject *bpy_app_help_text(PyObject * /*self*/, PyObject *args, PyObject *kwds)
 {
   bool all = false;
-  static const char *_keywords[] = {"all", nullptr};
+  static const char * const _keywords[] = {"all", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "|$" /* Optional keyword only arguments. */

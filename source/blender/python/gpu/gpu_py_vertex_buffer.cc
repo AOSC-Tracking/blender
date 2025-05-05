@@ -236,7 +236,7 @@ static PyObject *pygpu_vertbuf__tp_new(PyTypeObject * /*type*/, PyObject *args, 
     uint len;
   } params;
 
-  static const char *_keywords[] = {"format", "len", nullptr};
+  static const char * const _keywords[] = {"format", "len", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O!" /* `format` */
@@ -276,7 +276,7 @@ static PyObject *pygpu_vertbuf_attr_fill(BPyGPUVertBuf *self, PyObject *args, Py
   PyObject *data;
   PyObject *identifier;
 
-  static const char *_keywords[] = {"id", "data", nullptr};
+  static const char * const _keywords[] = {"id", "data", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O" /* `id` */

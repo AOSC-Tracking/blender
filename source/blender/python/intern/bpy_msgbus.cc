@@ -229,7 +229,7 @@ static PyObject *bpy_msgbus_subscribe_rna(PyObject * /*self*/, PyObject *args, P
     PyErr_Format(PyExc_TypeError, "%s: only keyword arguments are supported", error_prefix);
     return nullptr;
   }
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "key",
       "owner",
       "args",
@@ -336,7 +336,7 @@ static PyObject *bpy_msgbus_publish_rna(PyObject * /*self*/, PyObject *args, PyO
     PyErr_Format(PyExc_TypeError, "%s: only keyword arguments are supported", error_prefix);
     return nullptr;
   }
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "key",
       nullptr,
   };

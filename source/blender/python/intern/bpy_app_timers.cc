@@ -92,7 +92,7 @@ static PyObject *bpy_app_timers_register(PyObject * /*self*/, PyObject *args, Py
   double first_interval = 0;
   int persistent = false;
 
-  static const char *_keywords[] = {"function", "first_interval", "persistent", nullptr};
+  static const char * const _keywords[] = {"function", "first_interval", "persistent", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O"  /* `function` */

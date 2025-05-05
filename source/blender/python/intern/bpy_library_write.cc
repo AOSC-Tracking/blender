@@ -79,7 +79,7 @@ static PyObject *bpy_lib_write(BPy_PropertyRNA *self, PyObject *args, PyObject *
 
   bool use_fake_user = false, use_compress = false;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "filepath",
       "datablocks",
       "path_remap",

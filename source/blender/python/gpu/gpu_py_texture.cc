@@ -125,7 +125,7 @@ static PyObject *pygpu_texture__tp_new(PyTypeObject * /*self*/, PyObject *args, 
   BPyGPUBuffer *pybuffer_obj = nullptr;
   char err_out[256] = "unknown error. See console";
 
-  static const char *_keywords[] = {"size", "layers", "is_cubemap", "format", "data", nullptr};
+  static const char * const _keywords[] = {"size", "layers", "is_cubemap", "format", "data", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O"  /* `size` */
@@ -352,7 +352,7 @@ static PyObject *pygpu_texture_clear(BPyGPUTexture *self, PyObject *args, PyObje
 
   PyObject *py_values;
 
-  static const char *_keywords[] = {"format", "value", nullptr};
+  static const char * const _keywords[] = {"format", "value", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "$"  /* Keyword only arguments. */

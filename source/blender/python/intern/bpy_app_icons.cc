@@ -41,7 +41,7 @@ static PyObject *bpy_app_icons_new_triangles(PyObject * /*self*/, PyObject *args
   uchar coords_range[2];
   PyObject *py_coords, *py_colors;
 
-  static const char *_keywords[] = {"range", "coords", "colors", nullptr};
+  static const char * const _keywords[] = {"range", "coords", "colors", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "(BB)" /* `range` */
@@ -104,7 +104,7 @@ static PyObject *bpy_app_icons_new_triangles_from_file(PyObject * /*self*/,
 {
   PyC_UnicodeAsBytesAndSize_Data filepath_data = {nullptr};
 
-  static const char *_keywords[] = {"filepath", nullptr};
+  static const char * const _keywords[] = {"filepath", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O&" /* `filepath` */
@@ -138,7 +138,7 @@ PyDoc_STRVAR(
 static PyObject *bpy_app_icons_release(PyObject * /*self*/, PyObject *args, PyObject *kw)
 {
   int icon_id;
-  static const char *_keywords[] = {"icon_id", nullptr};
+  static const char * const _keywords[] = {"icon_id", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "i" /* `icon_id` */

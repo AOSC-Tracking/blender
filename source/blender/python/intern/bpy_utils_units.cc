@@ -175,7 +175,7 @@ static PyObject *bpyunits_to_value(PyObject * /*self*/, PyObject *args, PyObject
   int usys, ucat;
   PyObject *ret;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "unit_system",
       "unit_category",
       "str_input",
@@ -263,7 +263,7 @@ static PyObject *bpyunits_to_string(PyObject * /*self*/, PyObject *args, PyObjec
 
   int usys, ucat;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "unit_system",
       "unit_category",
       "value",

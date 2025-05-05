@@ -596,7 +596,7 @@ static PyObject *pygpu_shader_info_fragment_out(BPyGPUShaderCreateInfo *self,
   const char *name;
   PyC_StringEnum blend_type = {pygpu_dualblend_items, int(DualBlend::NONE)};
 
-  static const char *_keywords[] = {"slot", "type", "name", "blend", nullptr};
+  static const char * const _keywords[] = {"slot", "type", "name", "blend", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "i"  /* `slot` */
@@ -705,7 +705,7 @@ static PyObject *pygpu_shader_info_image(BPyGPUShaderCreateInfo *self,
   PyObject *py_qualifiers = nullptr;
   Qualifier qualifier = Qualifier::NO_RESTRICT;
 
-  static const char *_keywords[] = {"slot", "format", "type", "name", "qualifiers", nullptr};
+  static const char * const _keywords[] = {"slot", "format", "type", "name", "qualifiers", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "i"  /* `slot` */
@@ -902,7 +902,7 @@ static PyObject *pygpu_shader_info_push_constant(BPyGPUShaderCreateInfo *self,
   const char *name = nullptr;
   int array_size = 0;
 
-  static const char *_keywords[] = {"type", "name", "size", nullptr};
+  static const char * const _keywords[] = {"type", "name", "size", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O&" /* `type` */

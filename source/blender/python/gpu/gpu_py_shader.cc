@@ -118,7 +118,7 @@ static PyObject *pygpu_shader__tp_new(PyTypeObject * /*type*/, PyObject *args, P
     const char *name;
   } params = {nullptr};
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "vertexcode", "fragcode", "geocode", "libcode", "defines", "name", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
@@ -1013,7 +1013,7 @@ static PyObject *pygpu_shader_from_builtin(PyObject * /*self*/, PyObject *args, 
   PyC_StringEnum pygpu_bultinshader = {pygpu_shader_builtin_items};
   PyC_StringEnum pygpu_config = {pygpu_shader_config_items, GPU_SHADER_CFG_DEFAULT};
 
-  static const char *_keywords[] = {"shader_name", "config", nullptr};
+  static const char * const _keywords[] = {"shader_name", "config", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O&" /* `shader_name` */

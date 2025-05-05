@@ -39,7 +39,7 @@ static PyObject *pygpu_IndexBuf__tp_new(PyTypeObject * /*type*/, PyObject *args,
   uint index_len;
   GPUIndexBufBuilder builder;
 
-  static const char *_keywords[] = {"type", "seq", nullptr};
+  static const char * const _keywords[] = {"type", "seq", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "$O" /* `type` */

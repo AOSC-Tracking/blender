@@ -66,7 +66,7 @@ static PyObject *pygpu_uniformbuffer__tp_new(PyTypeObject * /*self*/,
   PyObject *pybuffer_obj;
   char err_out[256] = "unknown error. See console";
 
-  static const char *_keywords[] = {"data", nullptr};
+  static const char * const _keywords[] = {"data", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O" /* `data` */

@@ -190,7 +190,7 @@ static PyObject *bpy_lib_load(BPy_PropertyRNA *self, PyObject *args, PyObject *k
   bool create_liboverrides = false, reuse_liboverrides = false,
        create_liboverrides_runtime = false;
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "filepath",
       "link",
       "relative",

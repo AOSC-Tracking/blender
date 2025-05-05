@@ -57,7 +57,7 @@ static PyObject *pygpu_batch__tp_new(PyTypeObject * /*type*/, PyObject *args, Py
   BPyGPUVertBuf *py_vertbuf = nullptr;
   BPyGPUIndexBuf *py_indexbuf = nullptr;
 
-  static const char *_keywords[] = {"type", "buf", "elem", nullptr};
+  static const char * const _keywords[] = {"type", "buf", "elem", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "|$" /* Optional keyword only arguments. */
@@ -350,7 +350,7 @@ static PyObject *pygpu_batch_draw_instanced(BPyGPUBatch *self, PyObject *args, P
   int instance_start = 0;
   int instance_count = 0;
 
-  static const char *_keywords[] = {"program", "instance_start", "instance_count", nullptr};
+  static const char * const _keywords[] = {"program", "instance_start", "instance_count", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O!" /* `program` */
@@ -395,7 +395,7 @@ static PyObject *pygpu_batch_draw_range(BPyGPUBatch *self, PyObject *args, PyObj
   int elem_start = 0;
   int elem_count = 0;
 
-  static const char *_keywords[] = {"program", "elem_start", "elem_count", nullptr};
+  static const char * const _keywords[] = {"program", "elem_start", "elem_count", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O!" /* `program` */

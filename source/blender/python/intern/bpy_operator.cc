@@ -80,7 +80,7 @@ static PyObject *pyop_poll(PyObject * /*self*/, PyObject *args)
   }
 
   /* All arguments are positional. */
-  static const char *_keywords[] = {"", "", nullptr};
+  static const char * const _keywords[] = {"", "", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "s" /* `opname` */
@@ -151,7 +151,7 @@ static PyObject *pyop_call(PyObject * /*self*/, PyObject *args)
   }
 
   /* All arguments are positional. */
-  static const char *_keywords[] = {"", "", "", "", nullptr};
+  static const char * const _keywords[] = {"", "", "", "", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "s"  /* `opname` */
@@ -325,7 +325,7 @@ static PyObject *pyop_as_string(PyObject * /*self*/, PyObject *args)
   }
 
   /* All arguments are positional. */
-  static const char *_keywords[] = {"", "", "", "", nullptr};
+  static const char * const _keywords[] = {"", "", "", "", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "s"  /* `opname` */

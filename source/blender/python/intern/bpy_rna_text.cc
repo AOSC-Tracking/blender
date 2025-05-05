@@ -65,7 +65,7 @@ static PyObject *bpy_rna_region_as_string(PyObject *self, PyObject *args, PyObje
   /* Parse the region range. */
   TextRegion region;
 
-  static const char *_keywords[] = {"range", nullptr};
+  static const char * const _keywords[] = {"range", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "|$"         /* Optional keyword only arguments. */
@@ -135,7 +135,7 @@ static PyObject *bpy_rna_region_from_string(PyObject *self, PyObject *args, PyOb
   Py_ssize_t buf_len;
   TextRegion region;
 
-  static const char *_keywords[] = {"", "range", nullptr};
+  static const char * const _keywords[] = {"", "range", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "s#"         /* `buf` (positional). */

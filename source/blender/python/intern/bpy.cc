@@ -121,7 +121,7 @@ static PyObject *bpy_blend_paths(PyObject * /*self*/, PyObject *args, PyObject *
   bool packed = false;
   bool local = false;
 
-  static const char *_keywords[] = {"absolute", "packed", "local", nullptr};
+  static const char * const _keywords[] = {"absolute", "packed", "local", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "|$" /* Optional keyword only arguments. */
@@ -187,7 +187,7 @@ static PyObject *bpy_flip_name(PyObject * /*self*/, PyObject *args, PyObject *kw
   Py_ssize_t name_src_len;
   bool strip_digits = false;
 
-  static const char *_keywords[] = {"", "strip_digits", nullptr};
+  static const char * const _keywords[] = {"", "strip_digits", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "s#" /* `name` */
@@ -229,7 +229,7 @@ static PyObject *bpy_user_resource(PyObject * /*self*/, PyObject *args, PyObject
   PyC_StringEnum type = {type_items};
   PyC_UnicodeAsBytesAndSize_Data subdir_data = {nullptr};
 
-  static const char *_keywords[] = {"type", "path", nullptr};
+  static const char * const _keywords[] = {"type", "path", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O&" /* `type` */
@@ -283,7 +283,7 @@ static PyObject *bpy_system_resource(PyObject * /*self*/, PyObject *args, PyObje
 
   PyC_UnicodeAsBytesAndSize_Data subdir_data = {nullptr};
 
-  static const char *_keywords[] = {"type", "path", nullptr};
+  static const char * const _keywords[] = {"type", "path", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O&" /* `type` */
@@ -337,7 +337,7 @@ static PyObject *bpy_resource_path(PyObject * /*self*/, PyObject *args, PyObject
 
   int major = BLENDER_VERSION / 100, minor = BLENDER_VERSION % 100;
 
-  static const char *_keywords[] = {"type", "major", "minor", nullptr};
+  static const char * const _keywords[] = {"type", "major", "minor", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O&" /* `type` */
@@ -381,7 +381,7 @@ static PyObject *bpy_driver_secure_code_test(PyObject * /*self*/, PyObject *args
   PyObject *py_code;
   PyObject *py_namespace = nullptr;
   const bool verbose = false;
-  static const char *_keywords[] = {"code", "namespace", "verbose", nullptr};
+  static const char * const _keywords[] = {"code", "namespace", "verbose", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O!" /* `expression` */

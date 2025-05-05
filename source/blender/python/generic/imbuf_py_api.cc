@@ -94,7 +94,7 @@ static PyObject *py_imbuf_resize(Py_ImBuf *self, PyObject *args, PyObject *kw)
   };
   PyC_StringEnum method = {method_items, FAST};
 
-  static const char *_keywords[] = {"size", "method", nullptr};
+  static const char * const _keywords[] = {"size", "method", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "(ii)" /* `size` */
@@ -143,7 +143,7 @@ static PyObject *py_imbuf_crop(Py_ImBuf *self, PyObject *args, PyObject *kw)
 
   rcti crop;
 
-  static const char *_keywords[] = {"min", "max", nullptr};
+  static const char * const _keywords[] = {"min", "max", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "(II)" /* `min` */
@@ -476,7 +476,7 @@ PyDoc_STRVAR(
 static PyObject *M_imbuf_new(PyObject * /*self*/, PyObject *args, PyObject *kw)
 {
   int size[2];
-  static const char *_keywords[] = {"size", nullptr};
+  static const char * const _keywords[] = {"size", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "(ii)" /* `size` */
@@ -542,7 +542,7 @@ static PyObject *M_imbuf_load(PyObject * /*self*/, PyObject *args, PyObject *kw)
 {
   PyC_UnicodeAsBytesAndSize_Data filepath_data = {nullptr};
 
-  static const char *_keywords[] = {"filepath", nullptr};
+  static const char * const _keywords[] = {"filepath", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O&" /* `filepath` */
@@ -588,7 +588,7 @@ static PyObject *M_imbuf_write(PyObject * /*self*/, PyObject *args, PyObject *kw
   Py_ImBuf *py_imb;
   PyC_UnicodeAsBytesAndSize_Data filepath_data = {nullptr};
 
-  static const char *_keywords[] = {"image", "filepath", nullptr};
+  static const char * const _keywords[] = {"image", "filepath", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "O!" /* `image` */

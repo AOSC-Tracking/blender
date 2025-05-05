@@ -93,7 +93,7 @@ static PyObject *pygpu_vertformat_attr_add(BPyGPUVertFormat *self, PyObject *arg
     return nullptr;
   }
 
-  static const char *_keywords[] = {"id", "comp_type", "len", "fetch_mode", nullptr};
+  static const char * const _keywords[] = {"id", "comp_type", "len", "fetch_mode", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "$"  /* Keyword only arguments. */

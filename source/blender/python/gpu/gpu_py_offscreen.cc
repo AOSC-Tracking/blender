@@ -245,7 +245,7 @@ static PyObject *pygpu_offscreen_unbind(BPyGPUOffScreen *self, PyObject *args, P
 
   BPY_GPU_OFFSCREEN_CHECK_OBJ(self);
 
-  static const char *_keywords[] = {"restore", nullptr};
+  static const char * const _keywords[] = {"restore", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "|$" /* Optional keyword only arguments. */
@@ -278,7 +278,7 @@ static PyObject *pygpu_offscreen__tp_new(PyTypeObject * /*self*/, PyObject *args
   PyC_StringEnum pygpu_textureformat = {pygpu_framebuffer_color_texture_formats, GPU_RGBA8};
   char err_out[256];
 
-  static const char *_keywords[] = {"width", "height", "format", nullptr};
+  static const char * const _keywords[] = {"width", "height", "format", nullptr};
   static _PyArg_Parser _parser = {
       PY_ARG_PARSER_HEAD_COMPAT()
       "i"  /* `width` */
@@ -407,7 +407,7 @@ static PyObject *pygpu_offscreen_draw_view3d(BPyGPUOffScreen *self, PyObject *ar
 
   BPY_GPU_OFFSCREEN_CHECK_OBJ(self);
 
-  static const char *_keywords[] = {
+  static const char * const _keywords[] = {
       "scene",
       "view_layer",
       "view3d",
