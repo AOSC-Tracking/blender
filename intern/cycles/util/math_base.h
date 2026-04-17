@@ -806,10 +806,6 @@ ccl_device_inline uint32_t reverse_integer_bits(uint32_t x)
   return __brev(x);
 #elif defined(__KERNEL_METAL__)
   return reverse_bits(x);
-#elif defined(__aarch64__) || (defined(_M_ARM64) && !defined(_MSC_VER))
-  /* Assume the rbit is always available on 64bit ARM architecture. */
-  __asm__("rbit %w0, %w1" : "=r"(x) : "r"(x));
-  return x;
 #elif defined(__arm__) && ((__ARM_ARCH > 7) || __ARM_ARCH == 6 && __ARM_ARCH_ISA_THUMB >= 2)
   /* This ARM instruction is available in ARMv6T2 and above.
    * This 32-bit Thumb instruction is available in ARMv6T2 and above. */
